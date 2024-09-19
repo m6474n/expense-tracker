@@ -12,10 +12,12 @@ class CustomLineChart extends StatefulWidget {
 
 class _CustomLineChartState extends State<CustomLineChart> {
   List dropList = ['weekly', 'monthly'];
-  List<Color> gradColor = [
-    primaryColor, secondaryColor
-  ]; 
+
   var selectedVal;
+   Color getLineTooltipColor(FlSpot spot) {
+    // Customize the color based on the spot or other conditions
+    return primaryColor; // Example: return red color for all tooltips
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -33,13 +35,13 @@ class _CustomLineChartState extends State<CustomLineChart> {
             children: [
               const Text(
                 "Expence Chart",
-                style: TextStyle(fontFamily: "Inter bold", fontSize: 16),
+                style: TextStyle(fontFamily: "Inter bold", fontSize: 16, color:btnColor),
               ),
               Container(
                 width: 120,
                 child: CustomDropdown(
                     decoration: CustomDropdownDecoration(
-                        closedBorder: Border.all(color: borderColor),
+                        closedBorder: Border.all(color: secondaryColor),
                         hintStyle:
                             TextStyle(fontFamily: "Inter thin", fontSize: 12),
                         headerStyle:
@@ -173,15 +175,28 @@ class _CustomLineChartState extends State<CustomLineChart> {
                         ),
                       ),
                     ),
-                    borderData: FlBorderData(border: Border.all(width: 1, color: borderColor)),
-                    gridData:const FlGridData(
+                    borderData: FlBorderData(border: Border.all(width: 1, color: secondaryColor)),
+                    gridData: FlGridData(
                       drawHorizontalLine: true,
-                      drawVerticalLine: true,
+                      drawVerticalLine: false,
                     ),
+                   lineTouchData: LineTouchData(
+              touchTooltipData: LineTouchTooltipData(
+                getTooltipColor: getLineTooltipColor,
+                tooltipRoundedRadius: 8,
+                tooltipPadding: const EdgeInsets.all(8),
+                getTooltipItems: (List<LineBarSpot> touchedSpots) {
+                  return touchedSpots.map((LineBarSpot touchedSpot) {
+                    return LineTooltipItem(
+                      '${touchedSpot.y}',
+                      const TextStyle(color: Colors.white),
+                    );
+                  }).toList();})),
                     lineBarsData: [
                       LineChartBarData(
                         gradient: gradientColor,
-                        belowBarData: BarAreaData(color: primaryColor.withOpacity(0.5)),
+                        
+                        belowBarData: BarAreaData(gradient: lightGradientColor, show: true),
 
 // curveSmoothness: 0.6,
                         isCurved: true,

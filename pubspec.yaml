@@ -38,6 +38,8 @@ dependencies:
   fl_chart: ^0.69.0
   animated_custom_dropdown: ^3.1.1
   get: ^4.6.6
+  google_nav_bar: ^5.0.6
+  line_icons: ^2.0.3
 
 dev_dependencies:
   flutter_test:

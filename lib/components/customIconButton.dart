@@ -24,7 +24,7 @@ class CustomIconButton extends StatelessWidget {
         ),
         subtitle: Text(
           subtitle??'',
-          style: const TextStyle(fontFamily: "Inter bold", fontSize: 14),
+          style: const TextStyle(fontFamily: "Inter bold", fontSize: 14, ),
         ),
       ),
     );

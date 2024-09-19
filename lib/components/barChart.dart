@@ -24,7 +24,8 @@ class BarChartSample extends StatelessWidget {
     }).toList();
 
     return Scaffold(
-      appBar: AppBar(title: Text('Bar Chart Sample')),
+      backgroundColor: Colors.white,
+     
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: BarChart(
