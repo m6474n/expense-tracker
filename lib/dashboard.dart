@@ -43,22 +43,29 @@ class Dasboard extends StatelessWidget {
                   tabActiveBorder: Border.all(color: primaryColor),
                   tabBackgroundColor: primaryColor,
                   color: Colors.black,
-                  tabs: [
+                  tabs:const [
                     GButton(
                       icon: LineIcons.home,
                       text: 'Home',
+                    textStyle: TextStyle(fontFamily: "Inter", color: bgColor, fontSize: 14),
                     ),
                     GButton(
                       icon: LineIcons.barChartAlt,
                       text: 'Stats',
+                                          textStyle: TextStyle(fontFamily: "Inter", color: bgColor, fontSize: 14),
+
                     ),
                     GButton(
                       icon: LineIcons.wallet,
                       text: 'Wallet',
+                                          textStyle: TextStyle(fontFamily: "Inter", color: bgColor, fontSize: 14),
+
                     ),
                     GButton(
                       icon: LineIcons.user,
                       text: 'Profile',
+                                          textStyle: TextStyle(fontFamily: "Inter", color: bgColor, fontSize: 14),
+
                     ),
                   ],
                   selectedIndex: cont.selectedIndex,

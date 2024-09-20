@@ -35,43 +35,43 @@ class _CustomLineChartState extends State<CustomLineChart> {
             children: [
               const Text(
                 "Expence Chart",
-                style: TextStyle(fontFamily: "Inter bold", fontSize: 16, color:btnColor),
+                style: TextStyle(fontFamily: "Inter bold", fontSize: 16, color:primaryColor),
               ),
-              Container(
-                width: 120,
-                child: CustomDropdown(
-                    decoration: CustomDropdownDecoration(
-                        closedBorder: Border.all(color: secondaryColor),
-                        hintStyle:
-                            TextStyle(fontFamily: "Inter thin", fontSize: 12),
-                        headerStyle:
-                            TextStyle(fontFamily: "Inter thin", fontSize: 12),
-                        listItemStyle:
-                            TextStyle(fontFamily: "Inter thin", fontSize: 12)),
-                    closedHeaderPadding:
-                        EdgeInsets.symmetric(horizontal: 8, vertical: 6),
-                    items: dropList,
-                    onChanged: (newVal) {
-                      print('newVal: $newVal');
-                      setState(() {
-                        selectedVal = newVal;
-                      });
-                    }),
-              )
+              // Container(
+              //   width: 120,
+              //   child: CustomDropdown(
+              //       decoration: CustomDropdownDecoration(
+              //           closedBorder: Border.all(color: secondaryColor),
+              //           hintStyle:
+              //               TextStyle(fontFamily: "Inter thin", fontSize: 12),
+              //           headerStyle:
+              //               TextStyle(fontFamily: "Inter thin", fontSize: 12),
+              //           listItemStyle:
+              //               TextStyle(fontFamily: "Inter thin", fontSize: 12)),
+              //       closedHeaderPadding:
+              //           EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+              //       items: dropList,
+              //       onChanged: (newVal) {
+              //         print('newVal: $newVal');
+              //         setState(() {
+              //           selectedVal = newVal;
+              //         });
+              //       }),
+              // )
             ],
           ),
          
           Padding(
-            padding: const EdgeInsets.only(right: 18.0),
+            padding: const EdgeInsets.only(right: 0.0),
             child: Container(
-              padding: EdgeInsets.only(top: 18),
+              padding: EdgeInsets.only(top: 24),
               child: SizedBox(
                 height: 200,
-                width: double.infinity,
+                width: MediaQuery.of(context).size.width,
                 child: LineChart(
                   LineChartData(
                     minX: 0,
-                    maxX: selectedVal == "weekly" ? 7 : 11,
+                    maxX: 11,
                     minY: 0,
                     maxY: 10,
                     // baselineX: 2,
@@ -80,6 +80,7 @@ class _CustomLineChartState extends State<CustomLineChart> {
                     titlesData: FlTitlesData(
                       leftTitles: const AxisTitles(
                         sideTitles:SideTitles(
+                          // getTitlesWidget: ,
                           reservedSize: 30,
                           showTitles: true,
                         ),
@@ -90,82 +91,82 @@ class _CustomLineChartState extends State<CustomLineChart> {
                       bottomTitles: AxisTitles(
                         sideTitles: SideTitles(
                         
-                          showTitles: true,
+                          showTitles: false,
                           reservedSize: 20,
                           interval:selectedVal == "monthly"?  2: 1,
                           
-                          getTitlesWidget: (value, meta) {
+                          // getTitlesWidget: (value, meta) {
                             
-                            if(selectedVal == 'monthly'){
-                              switch (value.toInt()) {
-                              case 0:
-                                return Text('Jan',
-                                    style: TextStyle(fontSize: 12));
-                              case 1:
-                                return Text('Feb',
-                                    style: TextStyle(fontSize: 12));
-                              case 2:
-                                return Text('Mar',
-                                    style: TextStyle(fontSize: 12));
-                              case 3:
-                                return Text('Apr',
-                                    style: TextStyle(fontSize: 12));
-                              case 4:
-                                return Text('May',
-                                    style: TextStyle(fontSize: 12));
-                              case 5:
-                                return Text('Jun',
-                                    style: TextStyle(fontSize: 12));
-                              case 6:
-                                return Text('Jul',
-                                    style: TextStyle(fontSize: 12));
-                              case 7:
-                                return Text('Aug',
-                                    style: TextStyle(fontSize: 12));
-                              case 8:
-                                return Text('Sep',
-                                    style: TextStyle(fontSize: 12));
-                              case 9:
-                                return Text('Oct',
-                                    style: TextStyle(fontSize: 12));
-                              case 10:
-                                return Text('Nov',
-                                    style: TextStyle(fontSize: 12));
-                              case 11:
-                                return Text('Dec',
-                                    style: TextStyle(fontSize: 12));
-                              default:
-                                return Text('', style: TextStyle(fontSize: 12));
-                            }
-                            }else{
-                              switch (value.toInt()) {
-                              case 0:
-                                return Text('Mon',
-                                    style: TextStyle(fontSize: 12));
-                              case 1:
-                                return Text('Tue',
-                                    style: TextStyle(fontSize: 12));
-                              case 2:
-                                return Text('Wed',
-                                    style: TextStyle(fontSize: 12));
-                              case 3:
-                                return Text('Thu',
-                                    style: TextStyle(fontSize: 12));
-                              case 4:
-                                return Text('Fri',
-                                    style: TextStyle(fontSize: 12));
-                              case 5:
-                                return Text('Sat',
-                                    style: TextStyle(fontSize: 12));
-                              case 6:
-                                return Text('Sun',
-                                    style: TextStyle(fontSize: 12));
+                          //   if(selectedVal == 'monthly'){
+                          //     switch (value.toInt()) {
+                          //     case 0:
+                          //       return Text('Jan',
+                          //           style: TextStyle(fontSize: 12));
+                          //     case 1:
+                          //       return Text('Feb',
+                          //           style: TextStyle(fontSize: 12));
+                          //     case 2:
+                          //       return Text('Mar',
+                          //           style: TextStyle(fontSize: 12));
+                          //     case 3:
+                          //       return Text('Apr',
+                          //           style: TextStyle(fontSize: 12));
+                          //     case 4:
+                          //       return Text('May',
+                          //           style: TextStyle(fontSize: 12));
+                          //     case 5:
+                          //       return Text('Jun',
+                          //           style: TextStyle(fontSize: 12));
+                          //     case 6:
+                          //       return Text('Jul',
+                          //           style: TextStyle(fontSize: 12));
+                          //     case 7:
+                          //       return Text('Aug',
+                          //           style: TextStyle(fontSize: 12));
+                          //     case 8:
+                          //       return Text('Sep',
+                          //           style: TextStyle(fontSize: 12));
+                          //     case 9:
+                          //       return Text('Oct',
+                          //           style: TextStyle(fontSize: 12));
+                          //     case 10:
+                          //       return Text('Nov',
+                          //           style: TextStyle(fontSize: 12));
+                          //     case 11:
+                          //       return Text('Dec',
+                          //           style: TextStyle(fontSize: 12));
+                          //     default:
+                          //       return Text('', style: TextStyle(fontSize: 12));
+                          //   }
+                          //   }else{
+                          //     switch (value.toInt()) {
+                          //     case 0:
+                          //       return Text('Mon',
+                          //           style: TextStyle(fontSize: 12));
+                          //     case 1:
+                          //       return Text('Tue',
+                          //           style: TextStyle(fontSize: 12));
+                          //     case 2:
+                          //       return Text('Wed',
+                          //           style: TextStyle(fontSize: 12));
+                          //     case 3:
+                          //       return Text('Thu',
+                          //           style: TextStyle(fontSize: 12));
+                          //     case 4:
+                          //       return Text('Fri',
+                          //           style: TextStyle(fontSize: 12));
+                          //     case 5:
+                          //       return Text('Sat',
+                          //           style: TextStyle(fontSize: 12));
+                          //     case 6:
+                          //       return Text('Sun',
+                          //           style: TextStyle(fontSize: 12));
                              
-                            }
-                            return Container();
+                          //   }
+                            // return Container();
                             
-                            }
-                          },
+                            // }
+                          // },
                           
                         ),
                       ),
