@@ -8,13 +8,28 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class Wallet extends StatelessWidget {
-  const Wallet({super.key});
+   Wallet({super.key});
+List<Map<String,dynamic>> banks = [
+  {
+    'name': "Habib Bank Limited",
+    'image': 'assets/imgs/HBL.png'
+  },
+  {
+    'name': "Meeszan Bank",
+    'image': 'assets/imgs/Meezan.png'
+  },
+  {
+    'name': "Bank Al Falah",
+    'image': 'assets/imgs/Alflah.png'
+  },
+];
 
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
+      backgroundColor: bgColor,
       body: Stack(
         alignment: Alignment.topCenter,
         children: [
@@ -69,7 +84,7 @@ class Wallet extends StatelessWidget {
                     ),
                     ...List.generate(3, (index) {
                       return ReusableCard(
-                        title: "Wallet $index",
+                        title: banks[index]['name'],
                         subTitle: Text("\$${Random.secure().nextInt(50000)}"),
                         leading: Container(
                           height: 50,
@@ -78,7 +93,7 @@ class Wallet extends StatelessWidget {
                               color: bgColor,
                               borderRadius: BorderRadius.circular(12),
                               image: DecorationImage(
-                                  image: AssetImage('assets/imgs/MCB.png'),
+                                  image: AssetImage(banks[index]['image']),
                                   fit: BoxFit.cover),
                               border: Border.all(color: borderColor)),
                         ),

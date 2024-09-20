@@ -12,6 +12,9 @@ import 'package:line_icons/line_icons.dart';
 class Home extends StatelessWidget {
   Home({super.key});
   List<int> dataPoints = [5, 3, 8, 6, 7, 4, 5];
+List<String> goalsList = ["Shopping", "Food", "Entertainment", "Online Transactions"];
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +38,7 @@ class Home extends StatelessWidget {
                   style: TextStyle(fontFamily: "Inter "),
                 ),
                 Text(
-                  "\$244,500",
+                  "\$${Random.secure().nextInt(999999)}",
                   style: TextStyle(
                       fontFamily: "Inter black",
                       fontSize: 32,
@@ -91,14 +94,16 @@ class Home extends StatelessWidget {
                   height: 18,
                 ),
                 Text(
-                  "Total Balance",
-                  style: TextStyle(fontFamily: "Inter "),
+                  "Goals",
+                  style: TextStyle(fontFamily: "Inter bold",fontSize: 18),
                 ),
                 SizedBox(
                   height: 8,
                 ),
-                ReusableCard(
-                  trailing: Text("10%", style: TextStyle(fontFamily: "Inter"),),
+              ...List.generate(goalsList.length, (index){
+               var percent =   Random.secure().nextInt(100);
+                return   ReusableCard(
+                  trailing: Text("${percent}%", style: TextStyle(fontFamily: "Inter"),),
                   leading: Container(
                     width: 55,
                     decoration: BoxDecoration(
@@ -107,61 +112,22 @@ class Home extends StatelessWidget {
                     ),
                     child: Center(
                         child: Icon(
-                      LineIcons.shoppingBag,
+                      LineIcons.shoppingBasket,
                       color: primaryColor,
                       size: 32,
                     )),
                   ),
-                  title: "Shopping",
+                  title: goalsList[index],
                   subTitle: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [LinearProgressIndicator(
-                    value: 10 / 100,
+                    value: percent / 100,
                     backgroundColor: secondaryColor,
                     color: primaryColor,
-                  ), SizedBox(height: 4,),Text("10% / \$8000", style: TextStyle(fontFamily: "Inter", fontSize: 12),),],)
-                ),
-                 ReusableCard(
-                  leading: Container(
-                    width: 55,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      color: secondaryColor,
-                    ),
-                    child: Center(
-                        child: Icon(
-                      LineIcons.shoppingBag,
-                      color: primaryColor,
-                      size: 32,
-                    )),
-                  ),
-                  title: "Shopping",
-                  subTitle: LinearProgressIndicator(
-                    value: 10 / 100,
-                    backgroundColor: secondaryColor,
-                    color: primaryColor,
-                  ),
-                ), ReusableCard(
-                  leading: Container(
-                    width: 55,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      color: secondaryColor,
-                    ),
-                    child: Center(
-                        child: Icon(
-                      LineIcons.shoppingBag,
-                      color: primaryColor,
-                      size: 32,
-                    )),
-                  ),
-                  title: "Shopping",
-                  subTitle: LinearProgressIndicator(
-                    value: 10 / 100,
-                    backgroundColor: secondaryColor,
-                    color: primaryColor,
-                  ),
-                )
+                  ), SizedBox(height: 4,),Text("${percent}% / \$${Random.secure().nextInt(10000)}", style: TextStyle(fontFamily: "Inter", fontSize: 12),),],)
+                );
+              })
+               
               ],
             ),
           ),

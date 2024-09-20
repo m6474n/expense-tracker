@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 
-const Color btnColor = Color(0xffff9eb5
-);
+// const Color btnColor = Color(0xffff9eb5);
 const Color secondaryColor = Color(0xffF4F7FB);
 const Color purpleColor = Color.fromARGB(255, 175, 84, 255);
 const Color textColor = Color(0xff161616);
 // const Color primaryColor = Color(0xff0666eb);
 const Color primaryColor =Color.fromARGB(255, 71, 6, 235);
 const Gradient  gradientColor = LinearGradient(colors: [
-   primaryColor, 
+   Color(0xFF4706EB), 
    primaryColor, 
 ]);
 const Gradient  lightGradientColor = LinearGradient(colors: [

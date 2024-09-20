@@ -14,7 +14,7 @@ class ReusableCard extends StatelessWidget {
         padding: EdgeInsets.symmetric(vertical: 8),
         
         decoration: BoxDecoration(border: Border.all(color: borderColor), borderRadius: BorderRadius.circular(12)),
-        child: ListTile(leading: leading, title: Text(title??""),subtitle: subTitle, trailing: trailing,)),
+        child: ListTile(leading: leading, title: Text(title??"", style: TextStyle(fontSize: 14, fontFamily: "Inter"),),subtitle: subTitle, trailing: trailing,)),
     );
   }
 }

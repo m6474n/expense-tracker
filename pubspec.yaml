@@ -66,6 +66,17 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/imgs/MCB.png
+    - assets/imgs/Alflah.png
+    - assets/imgs/Allied.png
+    - assets/imgs/Askari.png
+    - assets/imgs/HBL.png
+    - assets/imgs/Meezan.png
+    - assets/imgs/Faysal.png
+    - assets/imgs/NBP.png
+    - assets/imgs/logo.png
+    - assets/imgs/profile-pic.png
+
+    # - assets/imgs/MCB.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

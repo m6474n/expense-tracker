@@ -1,5 +1,6 @@
 import 'package:expense_tracker/dashboard.dart';
 import 'package:expense_tracker/screens/home.dart';
+import 'package:expense_tracker/splashScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  Dasboard(),
+      home:  SplashScreen(),
     );
   }
 }

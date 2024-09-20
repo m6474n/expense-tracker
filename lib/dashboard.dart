@@ -1,4 +1,4 @@
-import 'package:expense_tracker/components/dashController.dart';
+import 'package:expense_tracker/controllers/dashController.dart';
 import 'package:expense_tracker/utility/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
