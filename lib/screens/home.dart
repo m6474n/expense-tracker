@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:expense_tracker/components/barChart.dart';
+import 'package:expense_tracker/components/goalCard.dart';
 import 'package:expense_tracker/components/lineChart.dart';
 import 'package:expense_tracker/components/customAppbar.dart';
 import 'package:expense_tracker/components/customIconButton.dart';
@@ -102,30 +103,7 @@ List<String> goalsList = ["Shopping", "Food", "Entertainment", "Online Transacti
                 ),
               ...List.generate(goalsList.length, (index){
                var percent =   Random.secure().nextInt(100);
-                return   ReusableCard(
-                  trailing: Text("${percent}%", style: TextStyle(fontFamily: "Inter"),),
-                  leading: Container(
-                    width: 55,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      color: secondaryColor,
-                    ),
-                    child: Center(
-                        child: Icon(
-                      LineIcons.shoppingBasket,
-                      color: primaryColor,
-                      size: 32,
-                    )),
-                  ),
-                  title: goalsList[index],
-                  subTitle: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [LinearProgressIndicator(
-                    value: percent / 100,
-                    backgroundColor: secondaryColor,
-                    color: primaryColor,
-                  ), SizedBox(height: 4,),Text("${percent}% / \$${Random.secure().nextInt(10000)}", style: TextStyle(fontFamily: "Inter", fontSize: 12),),],)
-                );
+                return   GoalCard(title: goalsList[index], percent: percent, goal: Random.secure().nextInt(10000),);
               })
                
               ],
