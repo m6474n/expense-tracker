@@ -1,4 +1,5 @@
 import 'package:expense_tracker/dashboard.dart';
+import 'package:expense_tracker/screens/auth/loginScreen.dart';
 import 'package:expense_tracker/screens/home.dart';
 import 'package:expense_tracker/splashScreen.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -25,7 +26,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  SplashScreen(),
+      // home:  SplashScreen(),
+      home: LoginScreen(),
     );
   }
 }

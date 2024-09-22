@@ -1,3 +1,4 @@
+import 'package:expense_tracker/components/piChart.dart';
 import 'package:flutter/material.dart';
 
 class IncomeStatScreen extends StatelessWidget {
@@ -6,7 +7,7 @@ class IncomeStatScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      body: Column(children: [Text("Income")],),
+      body: Column(children: [Text("Income"),CustomPiChart()],),
     );
   }
 }

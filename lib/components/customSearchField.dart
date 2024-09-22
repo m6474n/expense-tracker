@@ -18,7 +18,7 @@ class CustomInputField extends StatelessWidget {
       
         prefixIcon: prefix,
         suffixIcon: suffix,
-        hintStyle: TextStyle(fontFamily: "Inter"),
+        hintStyle: TextStyle(fontFamily: "Inter", fontSize: 14),
         hintText: "$title",
 label: label ? Text(title) : null,
         enabledBorder: OutlineInputBorder(
