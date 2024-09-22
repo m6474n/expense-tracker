@@ -1,10 +1,13 @@
 import 'package:expense_tracker/dashboard.dart';
 import 'package:expense_tracker/screens/home.dart';
 import 'package:expense_tracker/splashScreen.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
