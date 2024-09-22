@@ -71,6 +71,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		141A413FE48E5B4C738B07A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		97C146EB1CF9000F007C117D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -130,8 +137,8 @@
 				97C146F01CF9000F007C117D /* Runner */,
 				97C146EF1CF9000F007C117D /* Products */,
 				331C8082294A63A400263BE5 /* RunnerTests */,
-				394EAD4D8DC199B9612343A4 /* Pods */,
-				A76FF21FA813542D19191DD3 /* Frameworks */,
+
+				D4E94F8C7ECE4702CA9AF23C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,13 +168,12 @@
 			path = Runner;
 			sourceTree = "<group>";
 		};
-		A76FF21FA813542D19191DD3 /* Frameworks */ = {
+
+		D4E94F8C7ECE4702CA9AF23C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				87452A25F5B29B8C5BFFFDE1 /* Pods_Runner.framework */,
-				E44B5DB665DEB40C42040BDA /* Pods_RunnerTests.framework */,
 			);
-			name = Frameworks;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,7 +186,8 @@
 				16F518DF5164C9A33D35A1F7 /* [CP] Check Pods Manifest.lock */,
 				331C807D294A63A400263BE5 /* Sources */,
 				331C807F294A63A400263BE5 /* Resources */,
-				CD45D3C5202AFF9DCC21D4BD /* Frameworks */,
+
+				141A413FE48E5B4C738B07A0 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -244,7 +251,7 @@
 			);
 			mainGroup = 97C146E51CF9000F007C117D;
 			packageReferences = (
-				52136ADE2C9FC5DA00827964 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				52A1194D2CA0316B00AD6F99 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 97C146EF1CF9000F007C117D /* Products */;
 			projectDirPath = "";
@@ -759,7 +766,11 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+<<<<<<< HEAD
 		52136ADE2C9FC5DA00827964 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+=======
+		52A1194D2CA0316B00AD6F99 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+>>>>>>> d8b04c8 (Android firebase integration issue fixed)
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
