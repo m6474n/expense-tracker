@@ -4,6 +4,7 @@ import 'package:expense_tracker/screens/home.dart';
 import 'package:expense_tracker/splashScreen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/route_manager.dart';
 
 void main() async{
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home:  SplashScreen(),
+      builder: EasyLoading.init(),
       home: LoginScreen(),
     );
   }

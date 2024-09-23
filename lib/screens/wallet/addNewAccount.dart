@@ -1,4 +1,4 @@
-import 'package:expense_tracker/components/customSearchField.dart';
+import 'package:expense_tracker/components/customInputField.dart';
 import 'package:expense_tracker/components/reusableCard.dart';
 import 'package:expense_tracker/utility/constants.dart';
 import 'package:flutter/material.dart';
@@ -22,6 +22,9 @@ List<String> bankList = ["HBL", "Alflah", 'Faysal', "Meezan", "Askari", "MCB"];
           child: Column(
             children: [
               CustomInputField(
+                validator: (v){
+                          // v == null || v.isEmpty ? "Enter Name": null;
+                          },
                 title: 'Search Banks',
                 controller: TextEditingController(),
                 prefix: Icon(
