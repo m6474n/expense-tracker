@@ -74,5 +74,5 @@ Contributions are welcome! If you'd like to contribute, please follow these step
 For inquiries or feedback, feel free to reach out:
 - **Email:** m.mohsin2055@gmail.com
 
-- **Github:** [@octokatherine](https://www.github.com/m6474n)
+- **Github:** [@m6474n](https://www.github.com/m6474n)
 
