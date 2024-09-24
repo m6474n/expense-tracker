@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
       ),
       // home:  SplashScreen(),
       builder: EasyLoading.init(),
-      home: LoginScreen(),
+      home: SplashScreen(),
     );
   }
 }

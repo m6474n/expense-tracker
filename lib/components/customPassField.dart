@@ -5,11 +5,11 @@ class CustomPassField extends StatefulWidget {
   final String title;
   final bool label;
   final Widget? prefix;
-  
+  final FormFieldValidator validator;
   final TextEditingController controller;
   
   const CustomPassField({super.key, 
-  
+  required this.validator,
   required this.title,  this.label = false,  this.prefix, required this.controller});
 
   @override
@@ -23,6 +23,7 @@ bool isPassVisible = true;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+    validator:widget.validator,
       controller:  widget.controller,
       cursorColor: primaryColor,
       obscureText: isPassVisible,

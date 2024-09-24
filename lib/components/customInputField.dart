@@ -6,8 +6,7 @@ class CustomInputField extends StatelessWidget {
   final String title;
   final bool label;
   final Widget? prefix,suffix;
-
-  final Function(String?) validator;
+  final FormFieldValidator validator;
   final TextEditingController controller;
   
   const CustomInputField({super.key, 
@@ -19,9 +18,7 @@ class CustomInputField extends StatelessWidget {
     return TextFormField(
       controller:  controller,
       cursorColor: primaryColor,
-      validator:(e){
-        validator(e);
-      }
+      validator:validator
       ,
       decoration: InputDecoration(
       

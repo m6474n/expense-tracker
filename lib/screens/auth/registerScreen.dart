@@ -66,7 +66,7 @@ class RegisterScreen extends StatelessWidget {
                             )),
                         CustomInputField(
                           validator: (v){
-                          v == null || v.isEmpty ? "Enter Name": null;
+                       return   v == null || v.isEmpty ? "Enter Name": null;
                           },
                             title: "Enter Name", controller: cont.nameCont),
                         Container(
@@ -82,7 +82,7 @@ class RegisterScreen extends StatelessWidget {
                             )),
                         CustomInputField(
                           validator: (v){
-                          v == null || v.isEmpty ? "Enter Email": null;
+                        return  v == null || v.isEmpty ? "Enter Email": null;
                           },
                             title: "Enter Email", controller: cont.emailCont),
                         SizedBox(
@@ -100,6 +100,9 @@ class RegisterScreen extends StatelessWidget {
                               textAlign: TextAlign.start,
                             )),
                         CustomPassField(
+                          validator: ( v){
+                              return  v == null || v.isEmpty ? "Enter Password": v.length <6 ? "Password must be greater then 6 digit" : null;
+                          },
                             title: "Enter Password", controller: cont.passCont),
                         Container(
                             padding:
@@ -113,7 +116,11 @@ class RegisterScreen extends StatelessWidget {
                               textAlign: TextAlign.start,
                             )),
                         CustomPassField(
-                            title: "Confirm Pass",
+                                     validator: (v){
+
+                                                 return  v == null || v.isEmpty ? "Enter Password": v.length <6 ? "Password must be greater then 6 digit" : null;
+
+                           },        title: "Confirm Pass",
                             controller: cont.confirmPassCont),
                         Container(
                           padding: EdgeInsets.symmetric(vertical: 14),
@@ -136,7 +143,7 @@ class RegisterScreen extends StatelessWidget {
                         ),
                         CustomButton(onTap: () {
                           if(cont.registerFormKey.currentState!.validate()){
-                            print("object");
+                           cont.register();
                           }
                         }, title: "Register"),
                         SizedBox(

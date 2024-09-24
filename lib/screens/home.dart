@@ -94,14 +94,26 @@ List<String> goalsList = ["Shopping", "Food", "Entertainment", "Online Transacti
                 SizedBox(
                   height: 18,
                 ),
-                Text(
-                  "Goals",
-                  style: TextStyle(fontFamily: "Inter bold",fontSize: 18),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Goals",
+                      style: TextStyle(fontFamily: "Inter bold",fontSize: 18),
+                    ),GestureDetector(
+                      onTap: (){}
+                      ,
+                      child: Text(
+                        "see all",
+                        style: TextStyle(fontFamily: "Inter",fontSize: 14, color: primaryColor),
+                      ),
+                    ),
+                  ],
                 ),
                 SizedBox(
                   height: 8,
                 ),
-              ...List.generate(goalsList.length, (index){
+              ...List.generate(3, (index){
                var percent =   Random.secure().nextInt(100);
                 return   GoalCard(title: goalsList[index], percent: percent, goal: Random.secure().nextInt(10000),);
               })

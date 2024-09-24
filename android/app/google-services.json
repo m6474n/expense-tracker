@@ -12,7 +12,20 @@
           "package_name": "com.deversol.expense_tracker"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "233579511657-s0fqkai1mpurohsc1fvocj6hri8n3e0i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.deversol.expense_tracker",
+            "certificate_hash": "6c7de1ba3c059c06fd91f71299ccf34979436e62"
+          }
+        },
+        {
+          "client_id": "233579511657-6so6ef0137vf27pv28p9ntffpu3l02pf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDw-6qOS_ZVXlFh8QzzNpc5gAcYy1tGA0A"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "233579511657-6so6ef0137vf27pv28p9ntffpu3l02pf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "233579511657-evm8931oi0ru6dl8gl3eogb35k6o1m5l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.deversol.expenseTracker"
+              }
+            }
+          ]
         }
       }
     }
