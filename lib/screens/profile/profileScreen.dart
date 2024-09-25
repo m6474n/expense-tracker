@@ -1,7 +1,9 @@
 import 'package:expense_tracker/components/customButton.dart';
 import 'package:expense_tracker/components/reusableCard.dart';
+import 'package:expense_tracker/screens/Create%20New/Categories/categories.dart';
 import 'package:expense_tracker/utility/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:line_icons/line_icon.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -96,7 +98,9 @@ class ProfileScreen extends StatelessWidget {
                       ),
                     ),
                     ListTile(
-                      onTap: () {},
+                      onTap: () {
+                        Get.to(Categories());
+                      },
                       leading: Icon(
                         Icons.category_outlined,
                         size: 26,

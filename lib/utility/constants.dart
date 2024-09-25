@@ -20,4 +20,6 @@ const Color primaryProfit = Color(0xff6ae076);
 const Color secondaryProfit = Color(0xffF0FFF1);
 const Color primaryLoss = Color(0xffec2237);
 const Color secondaryLoss = Color.fromARGB(255, 255, 238, 240);
+const Color chartRed = Color.fromARGB(128, 236, 34, 54);
+const Color chartGreen = Color.fromARGB(166, 106, 224, 118);
 

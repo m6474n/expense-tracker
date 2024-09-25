@@ -40,9 +40,13 @@ dependencies:
   get: ^4.6.6
   google_nav_bar: ^5.0.6
   line_icons: ^2.0.3
-  # Firebase Integration
+
   firebase_core: ^3.5.0
-  
+  firebase_auth: ^5.3.0
+  firebase_storage: ^12.3.1 
+  cloud_firestore: ^5.4.2
+  flutter_svg: ^2.0.10+1
+  flutter_easyloading: ^3.0.5
 
 dev_dependencies:
   flutter_test:
@@ -78,6 +82,8 @@ flutter:
     - assets/imgs/NBP.png
     - assets/imgs/logo.png
     - assets/imgs/profile-pic.png
+    - assets/imgs/google.svg
+    - assets/imgs/github.svg
 
     # - assets/imgs/MCB.png
   #   - images/a_dot_ham.jpeg

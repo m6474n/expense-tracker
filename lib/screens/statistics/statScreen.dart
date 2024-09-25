@@ -1,4 +1,7 @@
 import 'package:expense_tracker/controllers/statController.dart';
+import 'package:expense_tracker/screens/statistics/allStatsScreen.dart';
+import 'package:expense_tracker/screens/statistics/expenseStat.dart';
+import 'package:expense_tracker/screens/statistics/incomeStats.dart';
 import 'package:expense_tracker/utility/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
@@ -28,9 +31,9 @@ class StatScreen extends StatelessWidget {
           builder: (cont) {
             return TabBarView(
                   children: [
-                   cont.AllStats(),
-                   cont.Income(),
-                   cont.Expense(),
+                  AllStatScreen(),
+                  IncomeStatScreen(),
+                  ExpenseStatScreen()
                   
               
                   ],
