@@ -1,5 +1,5 @@
 
-![Logo](https://raw.githubusercontent.com/m6474n/expense-tracker/refs/heads/main/assets/imgs/preview/expendi-cover.png?token=GHSAT0AAAAAACXGTDVTVFOA6YB6ZORSYO4OZXNXLEA)
+![Logo](https://raw.githubusercontent.com/m6474n/expense-tracker/refs/heads/main/assets/imgs/preview/expendi-cover.png)
 
 
 # Expendi - Your Ultimate Expense Tracker
@@ -9,7 +9,7 @@ Introducing Expendi, the innovative expense tracker designed to help you take co
 
 ## Screenshots
 
-![App Screenshot](https://raw.githubusercontent.com/m6474n/expense-tracker/refs/heads/main/assets/imgs/preview/expendi-screenshot.png?token=GHSAT0AAAAAACXGTDVTQFRO3V5UKUGKAHFOZXNYGCA)
+![App Screenshot](https://raw.githubusercontent.com/m6474n/expense-tracker/refs/heads/main/assets/imgs/preview/expendi-screenshot.png)
 
 
 ## Features
